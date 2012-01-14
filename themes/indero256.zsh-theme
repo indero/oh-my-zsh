@@ -42,9 +42,9 @@ RPROMPT='$(git_prompt_info)$(svn_prompt_info)$(my_rvm_prompt)'
 
 # git color config
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}(git)-[%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[green]%}]%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✘%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✔%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$FG[002]%}]%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$FG[001]%}✘%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[002]%}✔%{$reset_color%}"
 
 function svn_prompt_info {
     if [ $(in_svn) ]; then
@@ -54,11 +54,11 @@ $ZSH_THEME_REPO_NAME_COLOR$(svn_get_repo_name)$ZSH_PROMPT_BASE_COLOR$ZSH_THEME_S
 }
 
 # svn color config
-ZSH_THEME_SVN_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}(svn)-[%{$reset_color%}"
-ZSH_THEME_REPO_NAME_COLOR="$fg[124]"
+ZSH_THEME_SVN_PROMPT_PREFIX="%{$reset_color%}%{$FG[002]%}(svn)-[%{$reset_color%}"
+ZSH_THEME_REPO_NAME_COLOR="$FG[255]"
 ZSH_THEME_SVN_PROMPT_SUFFIX=""
-ZSH_THEME_SVN_PROMPT_DIRTY=" %{$fg[red]%}✘%{$fg[green]%}]%{$reset_color%}"
-ZSH_THEME_SVN_PROMPT_CLEAN=" %{$fg[green]%}✔%{$fg[green]%}]%{$reset_color%}"
+ZSH_THEME_SVN_PROMPT_DIRTY=" %{$FG[001]%}✘%{$FG[002]%}]%{$reset_color%}"
+ZSH_THEME_SVN_PROMPT_CLEAN=" %{$FG[002]%}✔%{$FG[002]%}]%{$reset_color%}"
 ZSH_THEME_SVN_PROMPT_REVISION=":"
 # rvm config
 
